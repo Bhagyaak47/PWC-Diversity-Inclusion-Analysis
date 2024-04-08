@@ -28,7 +28,6 @@ The dataset used for this task was presented by https://www.theforage.com
 - Other metrics like total hiring, turnover rate, total promotions etc.
 - Job levels after promotions
 
-- 
 ![Pwc Diversity   Inclusion (1)_001](https://github.com/Bhagyaak47/PWC-Diversity-Inclusion-Analysis/assets/152842490/69c87dd8-66ac-4f61-98c9-5a57bac07065)
 ![Pwc Diversity   Inclusion (1)_002](https://github.com/Bhagyaak47/PWC-Diversity-Inclusion-Analysis/assets/152842490/d693987b-5a65-428e-9afd-46ba88ffda00)
 
