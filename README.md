@@ -19,6 +19,22 @@ The dataset used for this task was presented by https://www.theforage.com
 - Some columns are blank which can be kept blank and will not affect the analysis.
 - Split 2 columns by Delimiter 1.Job Level after FY20 Promotion 2.Job Level after FY21 Promotion
 
+# Dax Formulas :
+
+- Total Employees = COUNT(Pharma[Employee ID])
+- Total Male Employees = CALCULATE(DISTINCTCOUNT('Pharma'[Employee ID]),FILTER('Pharma','Pharma'[Gender]="Male"))
+- Total Female Employee = CALCULATE(DISTINCTCOUNT(Pharma[Employee ID]),FILTER(Pharma,Pharma[Gender]="Female"))
+- Avg Female Performance Rating FY19 = CALCULATE(AVERAGE(Pharma[FY19 Performance Rating]),Pharma[Gender]="Female")
+- Avg Female Performance Rating FY20 = CALCULATE(AVERAGE(Pharma[FY20 Performance Rating]),Pharma[Gender]="Female")
+- Avg Male Performance Rating FY19 = CALCULATE(AVERAGE(Pharma[FY19 Performance Rating]),Pharma[Gender]="Male")
+- Avg Male Performance Rating FY20 = CALCULATE(AVERAGE(Pharma[FY20 Performance Rating]),Pharma[Gender]="Male")
+- Employees left in FY20 = CALCULATE(COUNT(Pharma[FY20 leaver?]),Pharma[FY20 leaver?]="Yes")
+- Hired in FY20 = CALCULATE(COUNT(Pharma[New hire FY20?]),Pharma[New hire FY20?]="Yes")
+- Promoted in FY20 = CALCULATE(COUNT(Pharma[Promotion in FY20?]),Pharma[Promotion in FY20?]="Yes")
+- Promoted in FY21 = CALCULATE(COUNT(Pharma[Promotion in FY21?]),Pharma[Promotion in FY21?]="Yes")
+- Total Employees before FY21 Hiring = (CALCULATE(count(Pharma[FY20 leaver?]),Pharma[FY20 leaver?]="No")+[Hired in FY20])
+- Turnover Rate % = DIVIDE([Employees left in FY20],[Total Employees])
+
 # Questions to be answered:
 - Total employees, Male and Female Employees.
 - Filtering by department and gender.
